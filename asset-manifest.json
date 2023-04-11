@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wnsgsn/static/css/main.02704946.css",
+    "main.js": "/wnsgsn/static/js/main.70159dd0.js",
+    "index.html": "/wnsgsn/index.html",
+    "main.02704946.css.map": "/wnsgsn/static/css/main.02704946.css.map",
+    "main.70159dd0.js.map": "/wnsgsn/static/js/main.70159dd0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02704946.css",
+    "static/js/main.70159dd0.js"
+  ]
+}
