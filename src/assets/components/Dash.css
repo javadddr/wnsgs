@@ -1,0 +1,10 @@
+.dash{
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;justify-content: space-between;
+
+}
+
+.footeridash{
+  margin-top: 300px;
+}

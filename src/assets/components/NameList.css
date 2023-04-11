@@ -1,0 +1,142 @@
+.names-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333;
+  width: 30%;
+  height: 100%;
+  position: relative;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+  /* background-color: rgb(233, 245, 244); */
+}
+
+.add-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.add-name input[type="text"] {
+  flex-grow: 1;
+  
+  padding: 10px;
+  border: 1px solid black;
+ 
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  font-size: 13px;
+}
+
+.add-name button {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  font-size: 13px;
+  background-color: rgb(46, 243, 46);
+  border: 1px solid black;
+  
+}
+.titlebv{
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  height: 255px;
+  width: 95%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-family: 'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 80px;
+  height: 40px;
+  flex-wrap: wrap;
+  text-overflow: inherit;
+  padding: 5px;
+  overflow:hidden;
+
+ 
+  border: 1px solid #0c0c0c;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(239, 17, 17, 0.1);
+  
+}
+
+.name:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 80px;
+  height: 40px;
+background-color: aqua;
+ 
+  border: 1px solid #0c0c0c;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(239, 17, 17, 0.1);
+  
+}
+
+
+
+.namesindivi{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  
+
+}
+
+.name.selected {
+  background-color: #5083e8;
+  color: #fff;
+}
+
+
+.delete {
+  margin-right: 10px;
+  padding: 1px;
+  margin-bottom: 5px;
+  border: none;
+ 
+  
+  height: 30px;
+  color: #fc3802;
+  font-size: 18px;
+  
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: #e6e31c;
+}

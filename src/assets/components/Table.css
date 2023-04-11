@@ -1,0 +1,223 @@
+/* Metal Names */
+.metal-names {
+  margin-bottom: 20px;
+  width: 100%;
+  
+}
+.metaladd{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+ 
+
+}
+h4{
+  margin: 0;
+  text-align: center;
+}
+.metaladdul{
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin-right: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  min-width: 50%;
+  min-height: 50px;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+.metaladdul1{
+  border: 1px solid rgb(222, 41, 41);
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin-right: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  min-height: 50%;
+  max-height: 50%;
+  
+
+}
+
+
+
+.tableaddb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+
+
+
+.metal-names li {
+  display: inline-block;
+  padding: 5px;
+  
+  margin-bottom: 5px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.metal-names li.selected {
+  background-color: blue;
+  color: white;
+}
+
+.metal-names form {
+  margin-top: 10px;
+}
+
+.metal-names label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.metal-names input[type="text"] {
+  flex-grow: 1;
+  
+  padding: 10px;
+  border: 1px solid black;
+ 
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  font-size: 13px;
+}
+
+.metal-names button {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  font-size: 13px;
+  background-color: rgb(46, 243, 46);
+  border: 1px solid black;
+}
+#delete{
+ margin-right: 10px;
+  background-color: #ea1a1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+
+/* Metal Table */
+.metal-namta {
+  width: 100%;
+  /* max-height: 100px; */
+  border-collapse: collapse;
+
+}
+.wholetable{
+  width: 100%;
+  max-height: 350px;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}
+.metal-totalitr{
+  background-color: #f2f2f2;
+}
+
+.metal-namta th,
+.metal-namta td {
+  padding: 10px;
+  border: 1px solid rgb(25, 24, 24);
+  text-align: center;
+}
+
+.metal-namta th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.metal-namta tfoot td {
+  font-weight: bold;
+}
+
+.metal-namta input[type="text"],
+.metal-namta input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.metal-totali {
+  text-align: right;
+  font-weight: bold;
+}
+
+.metal-totali1,
+.metal-totali2 {
+  font-weight: bold;
+  text-align: center;
+}
+.addi {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.titlebv{
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.step4{
+  position: absolute;
+  top: -60px;
+  left: 40px;
+
+}
+.step4b{
+ border: 1px solid black;
+
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: aquamarine;
+  font-size: 20px;
+}
+.tabledivcoli{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  height: 80%;
+  min-height: 600px;
+  max-height: 600px;
+  position: relative;
+}

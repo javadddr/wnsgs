@@ -1,3 +1,64 @@
+body{
+  
+  font-family: 'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: azure;
+
+}
+/* */
+/*  it says callender but actually it is for the whole app*/
+.wholeapp{
+  display: flex;
+  flex-direction: column;
+  margin-top: 130px;
+
+}
+.calnamescrap{
+  display: flex;
+ 
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  /* border: 1px solid black; */
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+
+}
+.finishbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.finishi {
+ 
+  border-radius: 10%;
+  background-color: rgb(124, 124, 244);
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.finishi:hover {
+  background-color: #0066cc;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tableupload{
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid black; */
+  margin: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+  padding: 10px;
+  padding-bottom: 20px;
+}
 .App {
   text-align: center;
 }
