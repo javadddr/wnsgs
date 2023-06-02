@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wnsgs/static/css/main.02704946.css",
+    "main.js": "/wnsgs/static/js/main.70159dd0.js",
+    "index.html": "/wnsgs/index.html",
+    "main.02704946.css.map": "/wnsgs/static/css/main.02704946.css.map",
+    "main.70159dd0.js.map": "/wnsgs/static/js/main.70159dd0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02704946.css",
+    "static/js/main.70159dd0.js"
+  ]
+}
