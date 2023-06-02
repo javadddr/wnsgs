@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/wnsgs/static/css/main.e28dffa7.css",
+    "main.js": "/wnsgs/static/js/main.001e2dfd.js",
+    "static/media/metal.png": "/wnsgs/static/media/metal.a6fe76e4779519b6d3de.png",
+    "static/media/scraping.png": "/wnsgs/static/media/scraping.7bea4a26ad35541ae675.png",
+    "static/media/delivery.png": "/wnsgs/static/media/delivery.6edcbac92632e48d4d69.png",
+    "static/media/x1.png": "/wnsgs/static/media/x1.b889191908f43d97aaa5.png",
+    "static/media/logos.svg": "/wnsgs/static/media/logos.a6690baa03ef3dc12423deba111e12df.svg",
+    "index.html": "/wnsgs/index.html",
+    "main.e28dffa7.css.map": "/wnsgs/static/css/main.e28dffa7.css.map",
+    "main.001e2dfd.js.map": "/wnsgs/static/js/main.001e2dfd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e28dffa7.css",
+    "static/js/main.001e2dfd.js"
+  ]
+}
