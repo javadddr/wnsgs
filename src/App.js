@@ -205,7 +205,7 @@ const [metalNames, setMetalNames] = useState([
   const postFinalState = useCallback(async () => {
     try {
       // Send a POST request to your backend endpoint
-      await axios.post('http://localhost:5000/data', finalState);
+      await axios.post('https://invoice-fgq4.onrender.com/data', finalState);
       console.log('Data saved successfully.');
     } catch (error) {
       console.error('Error saving data:', error);

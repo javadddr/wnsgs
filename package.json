@@ -1,6 +1,6 @@
 {
   "homepage": "https://javadddr.github.io/wnsgs",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://invoice-fgq4.onrender.com",
   "name": "wnsgs",
   "version": "0.1.0",
   "private": true,

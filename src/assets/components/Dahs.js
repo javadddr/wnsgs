@@ -27,7 +27,7 @@ console.log(data)
 
 const fetchData = async () => {
   try {
-    const response = await axios.get('http://localhost:5000/data');
+    const response = await axios.get('https://invoice-fgq4.onrender.com/data');
     const formattedData = response.data.map(item => ({
       ...item,
       dateselected: moment(item.dateselected).format('YYYY-MM-DD')

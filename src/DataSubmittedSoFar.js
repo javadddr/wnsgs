@@ -20,7 +20,7 @@ const DataSubmittedSoFar = ({filteredData}) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/data');
+      const response = await axios.get('https://invoice-fgq4.onrender.com/data');
       const formattedData = response.data.map(item => ({
         ...item,
         dateselected: format(new Date(item.dateselected), 'MMMM d, yyyy', {
@@ -40,7 +40,7 @@ const DataSubmittedSoFar = ({filteredData}) => {
   
   const deleteData = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/data/${id}`);
+      await axios.delete(`https://invoice-fgq4.onrender.com/data/${id}`);
       fetchData();
     } catch (error) {
       console.error(error);
@@ -49,7 +49,7 @@ const DataSubmittedSoFar = ({filteredData}) => {
 
   const updateData = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/data/${id}`, updatedValues);
+      await axios.put(`https://invoice-fgq4.onrender.com/data/${id}`, updatedValues);
       fetchData();
       setEditingRow('');
       setUpdatedValues({});
