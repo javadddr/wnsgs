@@ -29,9 +29,7 @@ function Calendar(props) {
 
   return (
     <div className='calenderi'>
-      <div class="step1">
-      <button  class="step1b"> 1 </button>
-      </div>
+    
       <div className="month-header">
         <button className='btnback' onClick={handlePrevMonthClick}>{'<'}</button>
         <h2 className='datecal'>{format(currentMonth, 'MMMM yyyy')}</h2>

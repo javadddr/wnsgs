@@ -28,22 +28,23 @@ h4{
   padding: 10px;
   min-width: 50%;
   min-height: 50px;
-  max-height: 100px;
+  max-height: 200px;
   overflow-y: scroll;
+  background-color: white;
 }
 .metaladdul1{
   border: 1px solid rgb(222, 41, 41);
-  margin: 5px;
+ 
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
-  margin-right: 20px;
+ 
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
-  min-height: 50%;
+  padding: 3px;
+  min-height: 50px;
   max-height: 50%;
-  
+  background-color: white;
 
 }
 
@@ -64,20 +65,19 @@ h4{
   display: inline-block;
   padding: 5px;
   
-  margin-bottom: 5px;
-  background-color: #eee;
+ 
+  background-color: #F8BCBC;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .metal-names li.selected {
-  background-color: blue;
+  background-color: #5252d4;
   color: white;
+  box-shadow: 10px 10px 10px rgb(149, 149, 149);
 }
 
-.metal-names form {
-  margin-top: 10px;
-}
+
 
 .metal-names label {
   display: block;
@@ -107,13 +107,12 @@ h4{
   border: 1px solid black;
 }
 #delete{
- margin-right: 10px;
-  background-color: #ea1a1a;
-  color: white;
+ margin-right: 2px;
+
   border: none;
-  border-radius: 5px;
+
   cursor: pointer;
-  font-size: 14px;
+
 }
 
 
@@ -142,6 +141,7 @@ h4{
   padding: 10px;
   border: 1px solid rgb(25, 24, 24);
   text-align: center;
+  background-color: white;
 }
 
 .metal-namta th {
@@ -155,11 +155,18 @@ h4{
 
 .metal-namta input[type="text"],
 .metal-namta input[type="number"] {
-  width: 100%;
+  width: 80%;
   padding: 5px;
   border: none;
   border-radius: 5px;
   text-align: center;
+  background: #D5EE97;
+border: 1px dashed #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-size: large;
+
+
+
 }
 
 .metal-totali {
@@ -172,22 +179,27 @@ h4{
   font-weight: bold;
   text-align: center;
 }
-.addi {
-  padding: 5px 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
+
 .titlebv{
-  margin: 0;
-  font-size: 30px;
-  font-weight: bold;
-  color: #333;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  font-style: normal;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  color: #FFFFFF;
+  background-color: #EF2D56;
+  border-radius: 0.9375rem;
+  -webkit-border-radius: 0.9375rem;
+  -moz-border-radius: 0.9375rem;
+  padding: 0.3125rem 0.6875rem;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-color: #050505;
+  -webkit-box-shadow: inset 40px -21px 0px -16px rgba(51,51,51,0.98);
+  -moz-box-shadow: inset 40px -21px 0px -16px rgba(51,51,51,0.98);
+  box-shadow: inset 40px -21px 0px -16px rgba(51,51,51,0.98);
+  width: 9%;
+  margin-bottom: 15px;
 }
 
 .step4{
@@ -215,9 +227,74 @@ h4{
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
-  width: 45%;
+  width: 98%;
   height: 80%;
-  min-height: 600px;
+  min-height: 400px;
   max-height: 600px;
   position: relative;
+  margin-bottom: 30px;
+}
+
+
+
+.nameanddelete{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+border: 1px solid black;
+border-radius: 5px;
+margin: 3px;
+margin-right: 15px;
+padding-right: 0;
+height: 40%;
+
+}
+
+
+
+
+.nameanddelete {
+  position: relative;
+}
+
+.trash-icon {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translate(0, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nameanddelete:hover .trash-icon {
+  opacity: 1;
+}
+
+
+.handlog1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+
+.addi{
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  /* width: 100px; */
+  
+  
+  
+
+  margin-top: 20px;
 }

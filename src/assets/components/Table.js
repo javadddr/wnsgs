@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Table.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import logo3 from "./metal.png";
 function Table(props) {
   const { rows, setRows,setMetalNames  ,metalNames, totalKg,setTotalKg, totalPrice, setTotalPrice } = props;
 
@@ -75,31 +75,39 @@ function Table(props) {
     console.log(updatedNames)
   };
   return (
+    <div>
+        <div className='handlog1'>
+      <img src={logo3} alt="Beevan" className='logo1'></img>
+  <h className="nameofbeevan">Metals</h>
+  
+  </div>
+    
     <div className="tabledivcoli">
-       <div class="step4">
-      <button  class="step4b"> 4 </button>
-      </div>
+        
       <div className="metal-names">
         <div className='metallist'>
-          <div className='titlebv'>
-        <h4 >Metal Names:</h4>
-        </div>
+         
         </div>
         <div className='metaladd'>
         <ul className='metaladdul'>
-          {metalNames.map((metalName, index) => (
-            <div key={index}>
-            <li
-              
-              className={metalName.selected ? 'selected' : ''}
-              onClick={(event) => handleNameClick(event, metalName.name)}
-            >
-              {metalName.name}
-            </li>
-            <button id="delete" onClick={() => handleDeleteName(metalName.id)}><FontAwesomeIcon icon={faTrash} /></button>
-            </div>
-          ))}
-        </ul>
+  {metalNames.map((metalName, index) => (
+    <div className='nameanddelete' key={index}>
+      <li
+        className={metalName.selected ? 'selected' : ''}
+        onClick={(event) => handleNameClick(event, metalName.name)}
+      >
+        {metalName.name}
+      </li>
+      <FontAwesomeIcon
+        icon={faTrashCan}
+        onClick={() => handleDeleteName(metalName.id)}
+        className="trash-icon"
+        id="delete"
+      />
+    </div>
+  ))}
+</ul>
+
         <form className='metaladdul1' onSubmit={handleNewNameSubmit}>
           <label className="metal-namesr">
             New Metal:
@@ -161,6 +169,7 @@ function Table(props) {
       </table>
       </div>
       <button onClick={addRow} className="addi">Add row</button>
+    </div>
     </div>
   );
 }

@@ -1,21 +1,51 @@
 body{
   
   font-family: 'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: azure;
+  background-color: #F5F7FB;
+  padding-right: 10px;
+  
+ 
 
+
+
+}
+
+.DataSubmittedSoFar{
+  margin-top: 126px;
+  margin-left: 50px;
+  margin-right: 50px;
+ 
+}
+.datafors{
+ background-image: url("../src/assets/components/blobs.png"),url("../src/assets/components/blobs1.png");
+
+	background-repeat: no-repeat;
+
+
+	background-size: 300px 300px, 300px 300px;
+  background-position: 100% 0%,0% 100%;
 }
 /* */
 /*  it says callender but actually it is for the whole app*/
 .wholeapp{
   display: flex;
   flex-direction: column;
-  margin-top: 130px;
+  margin-top: 10px;
+  width: 100%;
+
+  background-image: url("../src/assets/components/blobs.png"),url("../src/assets/components/blobs1.png");
+
+	background-repeat: no-repeat;
+
+
+	background-size: 300px 300px, 300px 300px;
+  background-position: 100% 7%,0% 100%;
 
 }
 .calnamescrap{
   display: flex;
  
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 20px;
   /* border: 1px solid black; */
@@ -24,6 +54,9 @@ body{
   padding-right: 30px;
   border-radius: 10px;
 
+}
+.calnamescrap2{
+  width: 100%;
 }
 .finishbtn{
   display: flex;
@@ -34,6 +67,7 @@ body{
 .finishi {
  
   border-radius: 10%;
+  
   background-color: rgb(124, 124, 244);
   color: white;
   font-size: 18px;
@@ -51,7 +85,8 @@ body{
 
 .tableupload{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   /* border: 1px solid black; */
   margin: 20px;
   border-radius: 10px;
@@ -97,3 +132,112 @@ body{
     transform: rotate(360deg);
   }
 }
+
+
+
+
+.DataSubmittedSoFar {
+  font-family: Arial, sans-serif;
+}
+
+.DataSubmittedSoFar h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.DataSubmittedSoFar table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.DataSubmittedSoFar th,
+.DataSubmittedSoFar td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.DataSubmittedSoFar th {
+  background-color: #f0f0f0;
+}
+
+.DataSubmittedSoFar tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.eddf {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.eddf:hover {
+  background-color: #0056b3;
+}
+
+
+.submit-button{
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100px;
+}
+
+
+
+.deletedf{
+ 
+ 
+  border-radius: 25px;
+  border: 2px solid rgb(17, 17, 17);
+  background-color: #ff4242;
+  cursor: pointer;
+  box-shadow: 0 0 10px #333;
+  overflow: hidden;
+  transition: .3s;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+
+
+.deletedf:hover {
+  background-color: rgb(245, 207, 207);
+  transform: scale(1.2);
+  box-shadow: 0 0 4px #111;
+  transition: .3s;
+}
+
+.downtitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.downt{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.downt1{
+  background-color: #F5F7FB;
+  border: none;
+}
+
+
+

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import "./NameList.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import logo2 from "./scraping.png";
 
 
 function Scrap(props) {
@@ -46,24 +47,13 @@ function Scrap(props) {
   };
 
   return (
-    <div className="names-list">
-       <div class="step1">
-      <button  class="step1b"> 3 </button>
-      </div>
-        <h className="titlebv">Scrapyard</h>
-        <div className="names">
-        
-        {names.map((name) => (
-          <div className='namesindivi' key={name.id}>
-          <div  className={`name ${name.selected ? 'selected' : ''}`} onClick={() => handleNameClick(name.id)}>
-            {name.name}
-            </div>
-           
-            <button className="delete" onClick={() => handleDeleteName(name.id)}><FontAwesomeIcon icon={faTrash} /></button>
-          
-          </div>
-        ))}
-      </div>
+    <div>
+      <div className='nameandaddingname'>
+      <div className='handlog'>
+      <img src={logo2} alt="Beevan" className='logo1'></img>
+  <h className="nameofbeevan">Scrapyard</h>
+  
+  </div>
       <div className="add-name">
         <input
           type="text"
@@ -72,9 +62,30 @@ function Scrap(props) {
           onChange={handleNewNameChange}
           onKeyPress={handleNewNameKeyPress}
         />
-        <button onClick={handleAddName}>Add Scrapyard</button>
-      </div>
       
+        <FontAwesomeIcon icon={faPlus} className="nameofbeevanadd" onClick={handleAddName}/>
+      </div>
+
+      </div>
+    <div className="names-list1">
+     
+     
+       
+        
+        {names.map((name) => (
+          <div className='namebig1' key={name.id}>
+          <div  className={`namebig ${name.selected ? 'selected' : ''}`} onClick={() => handleNameClick(name.id)}>
+            {name.name}
+            </div>
+           
+            <button className="delete" onClick={() => handleDeleteName(name.id)}><FontAwesomeIcon icon={faTrashCan} className="trash-icon" /></button>
+          
+          </div>
+        ))}
+     
+    
+      
+    </div>
     </div>
   );
 }
