@@ -97,7 +97,7 @@ const Heatmap = ({ filteredData }) => {
           .style('font-weight', 'bold')
           .style('margin-left', '10px')
           .style('font-weight', 'bold')
-          .text('Scrapyards');
+          .text('WeekNumber');
 
         svg.append('text')
           .attr('transform', 'rotate(-90)')
@@ -117,7 +117,7 @@ const Heatmap = ({ filteredData }) => {
   return (
     <div className="heatmapi1">
       <h1 style={{ fontSize: '16px', margin: '10px', marginLeft: '30px' }}>
-        Average selling prices per kg for each metal vs Metal type (Trends)
+        Average selling prices per kg for each metal vs Metal type (Weekly Trends)
       </h1>
       {filteredData.length > 0 ? (
         <div ref={svgRef}></div>
