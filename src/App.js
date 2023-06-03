@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     if (newState.length > 0) {
-     
+      setFinalState([]);
       const { selectedNames, selectedNamesi, nonEmptyRows, dateselected, totalKg, totalPrice } = newState[0];
       const newFinalState = nonEmptyRows.map((row) => ({
         dateselected,
@@ -51,7 +51,7 @@ function App() {
         totalKg,
         totalPrice,
       }));
-     
+      
       setFinalState(newFinalState);
       
      
