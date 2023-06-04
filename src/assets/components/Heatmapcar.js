@@ -106,7 +106,7 @@ const Heatmap = ({ filteredData }) => {
           .style('font-weight', 'bold')
           .style('margin-left', '10px')
           .style('font-weight', 'bold')
-          .text('Scrapyards');
+          .text('Beevans');
 
         svg.append('text')
           .attr('transform', 'rotate(-90)')

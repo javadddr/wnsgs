@@ -2,7 +2,7 @@ import React from 'react';
 import "./FinishPopup.css"
 
 
-function FinishPopup({ names,postFinalState,finalState, namesi,setMetalNames,setNamesi,setNames, rows, files, setRows,preview,setPreview, totalPrice, totalKg, setShowPopup,newState,setNewState,dateselected}) {
+function FinishPopup({ names,finalState, namesi,setMetalNames,setNamesi,setNames, rows, files, setRows,preview,setPreview, totalPrice, totalKg, setShowPopup,newState,setNewState,dateselected}) {
   // Create a list of selected names
   const selectedNames = names.filter((name) => name.selected).map((name) => name.name);
   // Create a list of selected namesi
@@ -129,7 +129,7 @@ function FinishPopup({ names,postFinalState,finalState, namesi,setMetalNames,set
   function handleButtonClick() {
    
     handleSubmit();
-    postFinalState();
+   
     
   }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useCallback} from 'react';
+import React, { useState, useEffect } from 'react';
 import { format} from 'date-fns';
 // import * as XLSX from 'xlsx';
 import axios from 'axios';
@@ -27,18 +27,13 @@ function App() {
   const [newState, setNewState] = useState([ ])
   const [totalKg, setTotalKg] = useState([ ])
   const [totalPrice, setTotalPrice] = useState([ ])
-  // const [newState1, setNewState1] = useState([ ])
-  
-  // console.log(selectedNames)
-
-  // const [finalState, setFinalState] = useState([]);
+ 
 
   const [finalState, setFinalState] = useState([]);
 
 
   useEffect(() => {
     if (newState.length > 0) {
-      setFinalState([]);
       const { selectedNames, selectedNamesi, nonEmptyRows, dateselected, totalKg, totalPrice } = newState[0];
       const newFinalState = nonEmptyRows.map((row) => ({
         dateselected,
@@ -51,36 +46,36 @@ function App() {
         totalKg,
         totalPrice,
       }));
-      
+
       setFinalState(newFinalState);
-      
-     
-  } 
-     else {
+
+      // POST finalState to the endpoint using Axios
+      axios
+        .post('https://invoice-fgq4.onrender.com/data', newFinalState)
+        .then((response) => {
+          if (response.status === 200) {
+            // Clear newFinalState and newState
+            setFinalState([]);
+            setNewState([]);
+          } else {
+            throw new Error('Failed to post data to the endpoint.');
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          // Handle the error condition if needed
+        });
+    } else {
       setFinalState([]);
     }
   }, [newState]);
   
   
-  
 
-console.log(finalState)
-useEffect(() => {
-  localStorage.setItem('finalState', JSON.stringify(finalState));
-}, [finalState]);
+console.log("newstate",newState)
+console.log("finalState",finalState)
 
-// function convertObjectToArray(obj) {
-//   const keys = ["dateselected", "totalKg", "totalPrice", "Name1", "Name2", "Metal 1", "kg 1", "pricePerKg 1", "totalPrice 1"];
-//   return keys.map(key => obj[key]);
-// }
 
-// function to write finalState to Excel file
-// function writeFinalStateToExcel(finalState) {
-//   const wb = XLSX.utils.book_new();
-//   const ws = XLSX.utils.json_to_sheet(finalState.map(convertObjectToArray));
-//   XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-//   XLSX.writeFile(wb, 'finalState.xlsx');
-// }
 
 
   //scrapyards states
@@ -194,27 +189,13 @@ const [metalNames, setMetalNames] = useState([
  
 ]);
 
-//upload file 
-  // const [files, setFiles] = useState([]);
-  // const [preview, setPreview] = useState([]);
-  // const [urlInput, setUrlInput] = useState("");
+//dsdddddddddddddddd
 
   const [showPopup, setShowPopup] = useState(false);
 
 
-  const postFinalState = useCallback(async () => {
-    try {
-      // Send a POST request to your backend endpoint
-      await axios.post('https://invoice-fgq4.onrender.com/data', finalState);
-      console.log('Data saved successfully.');
-    } catch (error) {
-      console.error('Error saving data:', error);
-    }
-  }, [finalState]);
   
-  useEffect(() => {
-    postFinalState(); // Call the function initially when the component mounts
-  }, [finalState, postFinalState]);
+ 
 
   return (
     <div className='wholeapp'>
@@ -257,7 +238,7 @@ const [metalNames, setMetalNames] = useState([
           setMetalNames={setMetalNames}
           setNamesi={setNamesi}
           setNames={setNames}
-          postFinalState={postFinalState}
+         
           finalState={finalState}
 
           
