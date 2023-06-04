@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import "./Dash.css"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BarChart, Bar, XAxis, YAxis,  Tooltip, Legend, LineChart, Line,PieChart,Pie,LabelList,Cell,ResponsiveContainer} from 'recharts';
+import { BarChart, Bar, XAxis, YAxis,  Tooltip, Legend, LineChart, Line,PieChart,Pie,LabelList,ReferenceLine,Cell,ResponsiveContainer} from 'recharts';
 
 import Heatmap from './Heatmap';
 import Heatmapcar from './Heatmapcar';
@@ -306,30 +306,30 @@ const handleLineMouseLeave = () => {
 
 
 
+  const uniqueDates = [...new Set(filteredData.map((item) => item.weekNumber))].sort((a, b) => a - b);
 
-  const uniqueDates = [...new Set(filteredData.map((item) => item.dateselected))].sort((a, b) => new Date(a) - new Date(b));
-console.log(uniqueDates)
+
   // Get all unique categories
   const allCategories = [...new Set(filteredData.map((item) => item['Metal 1']))];
   
-  // Prepare data for chart
-  const chartDatai = uniqueDates.map((date) => {
-    const filteredByDate = filteredData.filter((item) => item.dateselected === date);
+  const chartDatai = uniqueDates.map((weekNumber) => {
+    const filteredByWeek = filteredData.filter((item) => item.weekNumber === weekNumber);
     const categories = allCategories.map((category) => {
-      const item = filteredByDate.find((item) => item['Metal 1'] === category);
+      const item = filteredByWeek.find((item) => item['Metal 1'] === category);
       return item ? item['Metal 1'] : category;
     });
     const amounts = categories.map((category) => {
-      const item = filteredByDate.find((item) => item['Metal 1'] === category);
+      const item = filteredByWeek.find((item) => item['Metal 1'] === category);
       return item ? item['kg 1'] : 0;
     });
   
     return {
-      date,
+      weekNumber,
       categories,
       amounts,
     };
   });
+  
   
   let colorMappingo = {};
   if (chartDatai.length > 0) {
@@ -552,7 +552,7 @@ console.log(uniqueDates)
     <h2 className='tstack'>Metals collected vs Type</h2>
     <ResponsiveContainer width="100%" height={500}>
       <BarChart data={chartDatai}>
-        <XAxis dataKey="date" />
+        <XAxis dataKey="weekNumber" />
         <YAxis />
         <Tooltip
           content={({ payload, label, active }) => {
@@ -585,22 +585,43 @@ console.log(uniqueDates)
             name={category}
             fill={colorMappingo[category]}
           >
-            {index === chartDatai[0].categories.length - 1 && (
-              <LabelList
-                position="top"
-                fontWeight="bold"
-                fill="black"
-                content={({ payload }) => payload && payload.value !== 0 ? payload.value : null}
-              />
-            )}
+            <LabelList position="top" fontWeight="small" fill="black" />
           </Bar>
+        ))}
+        <Bar
+          dataKey="total"
+          stackId="stack"
+          fill="none"
+          isAnimationActive={false}
+          label={{
+            position: 'top',
+            fill: 'black',
+            fontWeight: 'bold',
+            content: ({ payload }) => payload && payload.value !== 0 ? payload.value : null
+          }}
+        />
+        {uniqueDates.map((date, index) => (
+          <text
+            key={`total-label-${index}`}
+            x={index * (100 / (uniqueDates.length - 1))}
+            y={chartDatai[index].total > 0 ? -10 : 10}
+            dy={chartDatai[index].total > 0 ? 0 : 16}
+            fill="#000"
+            textAnchor="middle"
+          >
+            {chartDatai[index].total}
+          </text>
         ))}
       </BarChart>
     </ResponsiveContainer>
   </div>
 ) : (
-    <div>No data available</div>
-  )}
+  <div>No data available</div>
+)}
+
+
+
+
 
 
 <Heatmapcar filteredData={filteredData}/>
